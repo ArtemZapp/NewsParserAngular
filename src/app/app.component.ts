@@ -28,5 +28,9 @@ export class AppComponent {
 		console.log("selected source is: "+source);
 		this.newsapi.getArticlesByID(source).subscribe(data => this.mArticles = data['articles']);
 	}
+
+	public doFilter = (value: string) => {
+		// this.dataSource.filter = value.trim().toLocaleLowerCase();
+	}
   
 }
